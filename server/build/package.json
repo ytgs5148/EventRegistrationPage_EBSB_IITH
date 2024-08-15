@@ -1,0 +1,27 @@
+{
+    "name": "server",
+    "description": "Backend Server for Event Registration Page",
+    "scripts": {
+        "start": "ts-node src/index.ts",
+        "dev": "nodemon --files ./src/index.ts",
+        "build": "npx -p typescript tsc"
+    },
+    "main": "src/index.js",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "google-auth-library": "^9.13.0",
+        "google-spreadsheet": "^4.1.2"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/express-session": "^1.18.0",
+        "@types/node": "^20.12.11",
+        "nodemon": "^3.1.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.3"
+    },
+    "private": true
+}
