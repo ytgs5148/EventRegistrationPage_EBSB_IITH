@@ -23,7 +23,7 @@ const RegistrationPage = () => {
     const [intro, setIntro] = useState('');
 
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        axios.post('http://localhost:3001/api/submit', {
+        axios.post('https://eventregistrationpage-ebsb-iith.onrender.com/api/submit', {
             fullName,
             email,
             branch,
