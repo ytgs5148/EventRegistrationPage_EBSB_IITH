@@ -2,12 +2,6 @@
 
 An event registration page for EBSB events in IITH
 
-# How to Run?
+# Images
 
-Run
-
-```cmd
-concurrently "cd server && npm run dev" "cd client && npm run dev"
-```
-
-to start the backend and react app
+![image](https://i.ibb.co/phzsNHr/Screenshot-315.png)
