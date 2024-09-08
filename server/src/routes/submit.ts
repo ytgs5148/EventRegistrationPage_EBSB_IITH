@@ -30,4 +30,28 @@ submitRouter.post('/', async (req, res) => {
     return res.status(200).json({ link: `https://docs.google.com/spreadsheets/d/${process.env.SHEET_ID}/edit?gid=0#gid=0` });
 });
 
+submitRouter.post('/upload', async (req, res) => {
+    const { text } = req.body
+
+    if (!text) {
+        return res.status(400).json({ message: 'Text is required' });
+    }
+
+    const request = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAMWxsM-qSg3-SfOLks6WCFyVVoIU9_yc0', {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        method: 'POST',
+        body: JSON.stringify({
+            contents: [{
+                parts: [{
+                    text: text
+                }]
+            }]
+        })
+    })
+
+    return res.status(200).json({ data: request.body })
+});
+
 export default submitRouter;

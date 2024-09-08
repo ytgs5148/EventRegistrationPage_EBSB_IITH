@@ -5,9 +5,9 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Navigate to={"/register/Art-Contest"} />} />
+                {/* <Route path="/" element={<Navigate to={"/register/Art-Contest"} />} />
                 <Route path="/events" element={<Navigate to={"/register/Art-Contest"} />} />
-                <Route path="/register/Art-Contest" element={<RegistrationPage />} />
+                <Route path="/register/Art-Contest" element={<RegistrationPage />} /> */}
             </Routes>
         </BrowserRouter>
     );
