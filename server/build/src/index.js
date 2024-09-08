@@ -41,7 +41,6 @@ app.use('/api/upload', (req, res) => __awaiter(void 0, void 0, void 0, function*
                     }]
             }]
     });
-    console.log(data);
     return res.status(200).json({ data: data });
 }));
 app.get('*', (req, res) => {
