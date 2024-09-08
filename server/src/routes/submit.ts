@@ -51,7 +51,8 @@ submitRouter.post('/upload', async (req, res) => {
         })
     })
 
-    return res.status(200).json({ data: request.json() })
+    console.log(request)
+    return res.status(200).json({ data: request })
 });
 
 export default submitRouter;

@@ -49,6 +49,7 @@ submitRouter.post('/upload', (req, res) => __awaiter(void 0, void 0, void 0, fun
                 }]
         })
     });
-    return res.status(200).json({ data: request.json() });
+    console.log(request);
+    return res.status(200).json({ data: request });
 }));
 exports.default = submitRouter;
