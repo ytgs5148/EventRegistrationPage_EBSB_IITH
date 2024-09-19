@@ -13,8 +13,11 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(
     cors({
-        origin: process.env.FRONTEND_URL,
-        credentials: true,
+        origin: (origin, callback) => {
+            if([process.env.FRONTEND_URL1,process.env.FRONTEND_URL2].includes(origin || '')){
+                callback(null, origin);
+            }
+        }
     })
 );
 app.use(express.static("build"));
